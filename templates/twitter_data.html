@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Twitter Data</title>
+</head>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+
+<body>
+  <table style="width:100%">
+    <tr>
+      <th>TweetID</th>
+      <th>Weekday</th>
+      <th>Hour</th>
+      <th>Day</th>
+      <th>Lang</th>
+      <th>isReshare</th>
+      <th>Reach</th>
+      <th>Retweet Count</th>
+      <th>Likes</th>
+      <th>Klout</th>
+      <th>Sentiment</th>
+      <th>Text</th>
+      <th>LocationID</th>
+      <th>UserID</th>
+    </tr>
+    {%for item in data%}
+    <tr>
+      <td>{{item[0]}}</td>
+      <td>{{item[1]}}</td>
+      <td>{{item[2]}}</td>
+      <td>{{item[3]}}</td>
+      <td>{{item[4]}}</td>
+      <td>{{item[5]}}</td>
+      <td>{{item[6]}}</td>
+      <td>{{item[7]}}</td>
+      <td>{{item[8]}}</td>
+      <td>{{item[9]}}</td>
+      <td>{{item[10]}}</td>
+      <td>{{item[11]}}</td>
+      <td>{{item[12]}}</td>
+      <td>{{item[13]}}</td>
+    </tr>
+    {%endfor%}
+  </table>
+</body>
+
+</html>
