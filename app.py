@@ -5,18 +5,16 @@ import pandas as pd
   
 app = Flask(__name__, template_folder='templates') 
   
-connect = sqlite3.connect('database.db') 
-connect.execute( 
-    'CREATE TABLE IF NOT EXISTS twitter_data') 
-  
 @app.route('/') 
 @app.route('/home') 
 def index(): 
     return render_template('index.html') 
   
+connect = sqlite3.connect('database.db') 
+connect.execute( 
+    'CREATE TABLE IF NOT EXISTS twitter_data (tweetid TEXT, weekday TEXT, hour INTEGER, day INTEGER, lang TEXT,isreshare TEXT, reach INTEGER, retweetcount INTEGER,likes INTEGER, klout INTEGER, sentiment NUMERIC, text TEXT, locationid INTEGER, userid TEXT)') 
 
-# @app.route('/join', methods=['GET','POST']) 
-    
+
 def store_dataset_in_database(url,filename, table_name):
     response = requests.get(url)
     if response.status_code == 200:

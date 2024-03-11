@@ -5,15 +5,41 @@
     <title>Group3 Project</title>
     <style>
         div.container {
-          text-align: center;
+            text-align: center;
         }
-        
+
         ol.myUL {
-          display: inline-block;
-          text-align: left;
+            display: inline-block;
+            text-align: left;
         }
-        
-        </style>
+
+        .btn {
+            border: none;
+            color: white;
+            padding: 10px 22px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .success {
+            background-color: #04AA6D;
+        }
+
+        /* Green */
+        .success:hover {
+            background-color: #46a049;
+        }
+    </style>
+    <script>
+        function success() {
+            alert("Data stored successfully!");
+          }
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -26,7 +52,7 @@
     </div>
     <p>Source link of the dataset : <a href="https://data.world/abbiejp/twitter-data">Twitter Data</a>!</p>
     <div>
-        <p>Definition and type of variables:</p>
+        <p>Definition and type of the variables:</p>
         <ul>
             <li><u>TweetID</u> - Unique identifier of a tweet - String</li>
             <li><u>Weekday</u> - Day of the week when the tweet was posted - String</li>
@@ -44,8 +70,10 @@
             <li><u>UserID</u> - Unique identifier of the user who posted the tweet - String</li>
         </ul>
     </div>
-    <button class="btn" type="button" onclick="window.location.href='{{ url_for('twitter_data') }}';">Check
+    <button class="btn success" type="button" onclick="window.location.href='{{ url_for('twitter_data') }}';success()">Store and
+        View
         Data</button>
+   
 </body>
 
 </html>
