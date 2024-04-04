@@ -30,11 +30,6 @@
             background-color: #46a049;
         }
     </style>
-    <script>
-        function success() {
-            alert("Data stored successfully!");
-          }
-    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -50,30 +45,10 @@
             <li>Hashwanth Adapa - #0856355</li>
         </ol>
     </div>
-    <p>Source link of the dataset : <a href="https://data.world/abbiejp/twitter-data">Twitter Data</a>!</p>
-    <div>
-        <p>Definition and type of the variables:</p>
-        <ul>
-            <li><u>TweetID</u> - Unique identifier of a tweet - String</li>
-            <li><u>Weekday</u> - Day of the week when the tweet was posted - String</li>
-            <li><u>Hour</u> - Hour of the day when the tweet was posted - Integer</li>
-            <li><u>Day</u> - Day of the month when the tweet was posted - Integer</li>
-            <li><u>Lang</u> - Language of the tweet - String</li>
-            <li><u>isReshare</u> - Whether the tweet is a reshare (or retweet) of another tweet- String</li>
-            <li><u>Reach</u> - Potential audience size or reach of the tweet - Integer</li>
-            <li><u>Retweet Count</u> - Number of times the tweet has been retweeted - Integer</li>
-            <li><u>Likes</u> - Number of likes (or favorites) the tweet has received - Integer</li>
-            <li><u>Klout</u> - Klout score of the user who posted the tweet - Integer</li>
-            <li><u>Sentiment</u> - Sentiment of the tweet - Decimal</li>
-            <li><u>Text</u> - Text content of the tweet - String</li>
-            <li><u>LocationID</u> - Unique identifier of the location associated with the tweet. - Integer</li>
-            <li><u>UserID</u> - Unique identifier of the user who posted the tweet - String</li>
-        </ul>
-    </div>
-    <button class="btn success" type="button" onclick="window.location.href='{{ url_for('twitter_data') }}';success()">Store and
-        View
-        Data</button>
-   
+    <ul>
+        <li><a href="{{ url_for('about') }}">About the dataset</a></li>
+        <li><a href="{{ url_for('twitter_data') }}">Data page</a></li>
+    </ul>
 </body>
 
 </html>
