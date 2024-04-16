@@ -10,22 +10,29 @@ This project is designed to streamline the process of fetching data and storing 
 ## Installation
 
 To set up the project, follow these steps:
+1. Clone the Repository:
+   
+   git clone https://github.com/Hashwanth355/DAB111_project_Group_3.git
 
-1. Activate the virtual environment:
+2. Move to the folder:
+   
+   cd DAB111_project_Group_3
+
+3. Activate the virtual environment:
     
     source venv/bin/activate  # for Linux/macOS
     #### or
     .\venv\Scripts\activate  # for Windows
     
 
-2. Install the required packages:
+4. Install the required packages:
     
     pip install -r requirements.txt
    
 
    The required packages include Flask, SQLite3, Requests, and Pandas.
 
-3. Run the Flask application:
+5. Run the Flask application:
     
     python app.py
     
